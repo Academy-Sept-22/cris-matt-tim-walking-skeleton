@@ -3,10 +3,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class App {
-//  jdbc:postgresql://localhost:5432/
+
     static final String DB_URL = "jdbc:mysql://localhost:3306/mySchema";
-    static final String DB_USERNAME = "root";
-    static final String DB_PASSWORD = "secret";
+    static final String DB_USERNAME = System.getenv("DB_USERNAME");
+    static final String DB_PASSWORD = System.getenv("DB_PASSWORD");
 
     public static void main(String args[]) {
         App app = new App();
