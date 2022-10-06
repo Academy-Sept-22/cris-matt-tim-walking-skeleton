@@ -26,8 +26,9 @@ jobs:
       run: mvn -B package --file pom.xml
 
 
-    - name: Deploy
+    - name: Checkout Repository
       uses: actions/checkout@v2
+    - name: Deploy
       uses: CDNievas/heroku-action@v1.0 # This is the action
       with:
         heroku_email: ${{secrets.HEROKU_EMAIL}}
